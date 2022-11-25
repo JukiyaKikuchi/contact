@@ -1,15 +1,35 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Contact</title>
+    <title>アプリ名</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
+    <link rel="preconnect" href="https://fonts.googleapis.com">   
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
+    <header>
+      <div class='header-contents'>
+        <div class='logo'>
+          クラス名
+        </div>
+        
+        <ul class='post-button'>
+          <% if user_signed_in? %>
+           <li><%= link_to current_user.nickname, root_path, class: "user-nickname" </li> %>
+           <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "logout" </li> %>
+          <% else %>
+           <li><%= link_to 'ログイン', new_user_session_path, class: "login" %></li>
+           <li><%= link_to '新規登録', new_user_registration_path, class: "sign-up" %></li>
+          <% end %>
+        </ul>
+      </div>
+    </header>
+
     <%= yield %>
   </body>
 </html>
