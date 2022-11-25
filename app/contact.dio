@@ -1,14 +1,14 @@
 <mxfile host="65bd71144e">
     <diagram id="ow9vEuK1xuUi988JZmgo" name="ページ1">
-        <mxGraphModel dx="1257" dy="2029" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+        <mxGraphModel dx="484" dy="2029" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
                 <mxCell id="2" value="users" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;" parent="1" vertex="1">
-                    <mxGeometry x="450" y="-300" width="160" height="150" as="geometry"/>
+                    <mxGeometry x="450" y="-315" width="160" height="165" as="geometry"/>
                 </mxCell>
-                <mxCell id="3" value="first_name&#10;last_name&#10;first_name_kana&#10;last_name_kana&#10;email(devise)&#10;encrypted_password(devise)&#10;birthday&#10;register_id" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;" parent="2" vertex="1">
-                    <mxGeometry y="30" width="160" height="120" as="geometry"/>
+                <mxCell id="3" value="first_name&#10;last_name&#10;first_name_kana&#10;last_name_kana&#10;email(devise)&#10;encrypted_password(devise)&#10;birthday&#10;image(active_storage)&#10;register_id" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;" parent="2" vertex="1">
+                    <mxGeometry y="30" width="160" height="135" as="geometry"/>
                 </mxCell>
                 <mxCell id="4" value="class_informations" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;" parent="1" vertex="1">
                     <mxGeometry x="870" y="-300" width="160" height="120" as="geometry"/>
