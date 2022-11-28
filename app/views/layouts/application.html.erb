@@ -15,7 +15,7 @@
    <header class='top-page-header'>
     <div class='nav'>
      <div class='class_name'>
-        クラス名
+        <%= link_to 'クラス名', root_path, class: "class_name" %>
      </div>
      <ul class='lists-right'>
        <% if user_signed_in? %>
