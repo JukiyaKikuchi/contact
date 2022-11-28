@@ -5,6 +5,7 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   has_one_attached :image
+  belongs_to :register
 
   validates :birthday, presence: true
   validates :image,    presence: true
