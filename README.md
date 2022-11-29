@@ -34,19 +34,19 @@
 - belongs_to : user
 -------------------------------------------------------------------------
 
-## general_informationsテーブル
+## registersテーブル
 
 | Column               | Type        | Options                        |
 |----------------------|-------------|--------------------------------|
 | title                | string      | null: false                    |
 | general_comment      | text        | null: false                    |
-| user                 | references  | null: false, foreign_key: true |
-| register             | references  | null: false, foreign_key: true |
 
 
 ## Association
-- belongs_to : register
-- belongs_to : user
+- has_many   : class_informations
+- has_many   : parent_books
+- has_many   : teacher_books
+- has_many   : users
 -------------------------------------------------------------------------
 
 ## parent_booksテーブル
@@ -87,14 +87,3 @@
 ## Association
 - belongs_to : register
 - belongs_to : user
------------------------------------------------------------------------------
-
-## registersテーブル
-
-## Association
-- has_many   : class_informations
-- has_many   : general_informations
-- has_many   : parent_books
-- has_many   : teacher_books
-- has_many   : users
-----------------------------------------------------------------------------
