@@ -11,6 +11,7 @@
 | last_name_kana     | string | null: false                |
 | first_name_kana    | string | null: false                |
 | birthday           | date   | null: false                |
+| register           | references| null:false, foreign_key: true|
 
 ## Association
 - has_many   : class_informations
