@@ -17,6 +17,10 @@ class RegistersController < ApplicationController
     end
   end
 
+  def show
+    @register = Register.find(params[:id])
+  end
+
   private
   def register_params
     params.require(:register).permit(:title, :general_comment, :image)
