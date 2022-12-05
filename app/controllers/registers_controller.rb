@@ -21,6 +21,13 @@ class RegistersController < ApplicationController
     @register = Register.find(params[:id])
   end
 
+  def destroy
+    register = Register.find(params[:id])
+    if register.destroy
+      redirect_to root_path
+    end
+  end
+
   private
   def register_params
     params.require(:register).permit(:title, :general_comment, :image)
