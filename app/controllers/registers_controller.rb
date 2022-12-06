@@ -1,4 +1,6 @@
 class RegistersController < ApplicationController
+  before_action :set_register, only: [:edit, :show, :update]
+
   def index
     @users = User.all
     @registers = Register.all
@@ -18,7 +20,17 @@ class RegistersController < ApplicationController
   end
 
   def show
-    @register = Register.find(params[:id])
+  end
+
+  def edit
+  end
+
+  def update
+    if @register.update(register_params)
+      redirect_to root_path
+    else
+      render :edit
+    end
   end
 
   def destroy
@@ -31,5 +43,9 @@ class RegistersController < ApplicationController
   private
   def register_params
     params.require(:register).permit(:title, :general_comment, :image)
+  end
+
+  def set_register
+    @register = Register.find(params[:id])
   end
 end
