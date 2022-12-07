@@ -1,1 +1,40 @@
-<h1>トップページ</h1>
+<%# 一覧表示画面 %>
+<div class='index-main'>
+  <div class='general_information'>
+    全体のお知らせ
+  </div>
+  <div class='post-contents'>
+    <% @registers.each do |register| %>
+      <%# 投稿１件分の表示 %>
+      <div class='post-content'>
+        <%# 質問本文の表示 %>
+        <div class='post-list'>
+          <div class='post-top'>
+            <div class='post-top__title'>
+              <%= link_to "#{register.title}", register_path(register.id), method: :get %>
+            </div>
+            <div class="question-top__name">
+              <%= register.created_at.strftime("%Y/%m/%d") %>
+            </div>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+
+  <div class='show-answers'>
+    <div class='class_information'>
+      クラスお知らせ
+    </div>
+  </div>
+  <div class='show-answers'>
+    <div class='child_list'>
+      子供たち
+    </div>
+  </div>
+  <div class='user__card'>
+    <% @users.each do |user| %>
+      <%= render partial: 'register', locals: {user: user} %>
+    <% end %>
+  </div>
+</div>

@@ -1,25 +1,27 @@
 <div class="main">
   <div class="inner">
-    <div class="prototype__wrapper">
-      <p class="prototype__hedding">
+    <div class="register__wrapper">
+      <p class="register__heading">
         <%= @register.title %>
       </p>    
-      <div class="prototype__manage">
-          <%= link_to "編集する", edit_register_path(@register.id), method: :get, class: :prototype__btn %>
-          <%= link_to "削除する",  register_path(@register.id), method: :delete, class: :prototype__btn %>
+      <div class="register__manage">
+          <%= link_to "編集する", edit_register_path(@register.id), method: :get, class: :register__btn %>
+          <%= link_to "削除する",  register_path(@register.id), method: :delete, class: :register__btn %>
       </div>
-      <div class="prototype__comments">
-        <div class="field">
+      <div class="comment_field">
+        <div class="register__comment">
           コメント
         </div>
         <%= @register.general_comment %>
       </div>
       
       <% if @register.image.presence %>
-       <div class="prototype__image">
-        <%= image_tag @register.image %>
-       </div>
+       <div class="register__image">
+          <%= image_tag @register.image %>
+       <div>
       <% end %>
     </div>
   </div>
 </div>
+
+

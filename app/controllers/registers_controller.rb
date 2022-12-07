@@ -1,5 +1,5 @@
 class RegistersController < ApplicationController
-  before_action :set_register, only: [:edit, :show, :update]
+  before_action :set_register, only: [:edit, :show, :update, ]
 
   def index
     @users = User.all
