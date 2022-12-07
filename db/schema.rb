@@ -44,10 +44,8 @@ ActiveRecord::Schema.define(version: 2022_12_07_042144) do
     t.integer "attendance_id", null: false
     t.integer "greeted_time_id"
     t.bigint "user_id", null: false
-    t.bigint "register_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["register_id"], name: "index_parent_books_on_register_id"
     t.index ["user_id"], name: "index_parent_books_on_user_id"
   end
 
@@ -76,6 +74,5 @@ ActiveRecord::Schema.define(version: 2022_12_07_042144) do
   end
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
-  add_foreign_key "parent_books", "registers"
   add_foreign_key "parent_books", "users"
 end

@@ -11,7 +11,6 @@ class CreateParentBooks < ActiveRecord::Migration[6.0]
       t.integer :attendance_id,      null: false
       t.integer :greeted_time_id
       t.references :user,            null: false, foreign_key: true
-      t.references :register,        null: false, foreign_key: true
 
       t.timestamps
     end

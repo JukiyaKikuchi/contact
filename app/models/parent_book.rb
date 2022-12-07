@@ -10,5 +10,4 @@ class ParentBook < ApplicationRecord
   validates :attendance_id, numericality: { other_than: 1, message: "can't be blank" } 
 
   belongs_to :user
-  belongs_to :register
 end
