@@ -40,7 +40,7 @@ ActiveRecord::Schema.define(version: 2022_12_07_042144) do
     t.string "breakfast"
     t.string "greeted_name"
     t.string "tell_number"
-    t.integer "poop_id"
+    t.integer "mood_id"
     t.integer "attendance_id", null: false
     t.integer "greeted_time_id"
     t.bigint "user_id", null: false
