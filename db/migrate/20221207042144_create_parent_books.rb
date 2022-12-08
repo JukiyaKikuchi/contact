@@ -7,7 +7,7 @@ class CreateParentBooks < ActiveRecord::Migration[6.0]
       t.string :breakfast
       t.string :greeted_name
       t.string :tell_number
-      t.integer :poop_id
+      t.integer :mood_id
       t.integer :attendance_id,      null: false
       t.integer :greeted_time_id
       t.references :user,            null: false, foreign_key: true
