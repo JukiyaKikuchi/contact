@@ -1,4 +1,4 @@
-class Poop < ActiveHash::Base
+class Mood < ActiveHash::Base
   self.data = [
     { id: 1, name: '---' },
     { id: 2, name: '良い' },
