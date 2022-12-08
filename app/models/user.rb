@@ -6,6 +6,7 @@ class User < ApplicationRecord
 
   has_one_attached :image
   belongs_to :register, optional: true
+  has_many :parent_books
 
   validates :birthday, presence: true
   validates :image,    presence: true
