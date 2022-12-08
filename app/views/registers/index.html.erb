@@ -22,19 +22,21 @@
     <% end %>
   </div>
 
-  <div class='show-answers'>
+  <div class='information_field'>
     <div class='class_information'>
       クラスお知らせ
     </div>
   </div>
-  <div class='show-answers'>
+  
+  <div class='child_zone'>
     <div class='child_list'>
       子供たち
     </div>
-  </div>
-  <div class='user__card'>
-    <% @users.each do |user| %>
-      <%= render partial: 'register', locals: {user: user} %>
-    <% end %>
+    <div class='user__card'>
+     <% @users.each do |user| %>
+       <%= render partial: 'register', locals: {user: user} %>
+     <% end %>
+    </div>
   </div>
 </div>
+

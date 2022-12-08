@@ -1,0 +1,31 @@
+<div class='new-main'>
+  <%# フォーム %>
+  <div class='parent-form'>
+    <%# フォームのヘッダー表示 %>
+    <div class='form-top'>
+      <div class='form-top-title'>
+        家庭用連絡帳一覧
+      </div>
+    </div>
+
+    <%# フォームのメイン部分 %>
+    <div class='parent-form-main'>
+      
+     <% @parent_books.each do |parent_book| %>
+      <div class="form-list">
+       <div class="child-condition">
+         <%= link_to parent_book.attendance.name, parent_book_path(parent_book.id) %>
+       </div>
+       <div class="post-date">
+         <%= parent_book.created_at.strftime("%Y/%m/%d") %>
+       </div>
+      </div>
+     <% end %>
+    
+    </div>
+  </div>
+
+  <div class="btn-area">
+    <%= link_to "新規投稿", new_parent_book_path ,class:"parent-red-btn"%>
+  </div>
+</div>

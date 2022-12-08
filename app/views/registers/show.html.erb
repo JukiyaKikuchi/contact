@@ -8,18 +8,25 @@
           <%= link_to "編集する", edit_register_path(@register.id), method: :get, class: :register__btn %>
           <%= link_to "削除する",  register_path(@register.id), method: :delete, class: :register__btn %>
       </div>
-      <div class="comment_field">
-        <div class="register__comment">
+    </div>
+    <div class="register-form">
+      <div class='register-form-top'>
+        <div class='register-top-title'>
           コメント
         </div>
-        <%= @register.general_comment %>
       </div>
-      
+      <div class='register-form-main'>
+        <div class="register-comment">
+          <%= @register.general_comment %>
+        </div>
+      </div>
       <% if @register.image.presence %>
-       <div class="register__image">
+        <div class="register__image">
           <%= image_tag @register.image %>
-       <div>
-      <% end %>
+        </div>
+      <% else %>
+        <div class="blank">画像はありません</div>
+      <% end %> 
     </div>
   </div>
 </div>

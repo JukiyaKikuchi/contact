@@ -1,0 +1,56 @@
+<div class="parent_book-show">
+  <div class="book-box">
+    <h2 class="name">
+      <%= link_to @parent_book.user.first_name,  parent_books_path %>
+    </h2>
+    <div class="item-img-content">
+      <%= image_tag @parent_book.user.image ,class:"parent-box-img" %>
+    </div>
+
+        <%= link_to "編集", edit_parent_book_path(@parent_book.id), method: :get, class: "parent-red-btn" %>
+        <%= link_to "削除", parent_book_path(@parent_book.id), method: :delete, class:"parent-destroy" %>
+
+    <div class="parent-explain-box">
+      <span>入力情報</span>
+    </div>
+    <table class="detail-table">
+      <tbody>
+        <tr>
+          <th class="detail-item">出欠</th>
+          <td class="detail-value"><%= @parent_book.attendance.name %></td>
+        </tr>
+        <tr>
+          <th class="detail-item">記入者名</th>
+          <td class="detail-value"><%= @parent_book.parent_name %></td>
+        </tr>
+        <tr>
+          <th class="detail-item">家庭での様子</th>
+          <td class="detail-value"><%= @parent_book.parent_comment %></td>
+        </tr>
+        <tr>
+          <th class="detail-item">体温</th>
+          <td class="detail-value"><%= @parent_book.temperature %></td>
+        </tr>
+        <tr>
+          <th class="detail-item">朝食</th>
+          <td class="detail-value"><%= @parent_book.breakfast %></td>
+        </tr>
+        <tr>
+          <th class="detail-item">機嫌</th>
+          <td class="detail-value"><%= @parent_book.mood.name %></td>
+        </tr>
+        <tr>
+          <th class="detail-item">お迎え時間</th>
+          <td class="detail-value"><%= @parent_book.greeted_time.name %></td>
+        </tr>
+        <tr>
+          <th class="detail-item">お迎えに来る人</th>
+          <td class="detail-value"><%= @parent_book.greeted_name %></td>
+        </tr>
+        <tr>
+          <th class="detail-item">緊急連絡先</th>
+          <td class="detail-value"><%= @parent_book.tell_number %></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
