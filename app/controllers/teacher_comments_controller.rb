@@ -1,0 +1,2 @@
+class TeacherCommentsController < ApplicationController
+end
