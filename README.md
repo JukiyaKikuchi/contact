@@ -77,10 +77,12 @@ CONTACT
 | greeted_name    | string     |                                |
 | tell_number     | string     |                                |
 | user            | references | null: false, foreign_key: true |
+| register        | references | null: false, foreign_key: true |
 
 
 ### Association
 - belongs_to : user
+- belongs_to : register
 - has_many   : teachers_comments
 ----------------------------------------------------------------------------
 
