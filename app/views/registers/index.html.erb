@@ -22,21 +22,94 @@
     <% end %>
   </div>
 
-  <div class='information_field'>
-    <div class='class_information'>
-      クラスお知らせ
+  <%#連絡帳%>
+  <% if user_signed_in? && current_user.admin? %>
+  <div class="list-main">
+    <div class='parent-form'>
+      <div class='form-top'>
+        <div class='form-top-title'>
+          家庭用連絡帳一覧
+        </div>
+      </div>
+      <div class="admin-form-main">
+      <% @parent_books.each do |parent_book|%>
+         <div class="admin-form-list">
+           <div class="child-condition">
+             <%= link_to parent_book.attendance.name, parent_book_path(parent_book.id) %>
+           </div>
+           <div class="post-date">
+             <%= parent_book.created_at.strftime("%Y/%m/%d") %>
+           </div>
+         </div>
+      <% end %> 
+      </div>
     </div>
   </div>
-  
-  <div class='child_zone'>
-    <div class='child_list'>
-      子供たち
+  <% end %>
+  <%#%>
+
+  <div class='children_zone'>
+  <%# 管理者画面 %>
+    <% if user_signed_in? && current_user.admin? %>
+    <div class = "children">
+      子どもたち
     </div>
-    <div class='user__card'>
-     <% @users.each do |user| %>
-       <%= render partial: 'register', locals: {user: user} %>
-     <% end %>
+    <div class ="user__card_area">
+       <% @users.each do |user| %>
+       <div class ="child_list">
+         <div class ="card">
+           <div class ="child-name-box">
+             <%= user.first_name %>
+           </div>
+           <%= image_tag(user.image, class: :card__img ) %>
+         </div>
+       </div>
+       <% end %>
+      <%#%>
+       <%# 親でログイン時%>
+       <% else user_signed_in? %>
+       <div class="child_list">
+       <div class="card">
+          <div class="child-name-box">
+            <%= @user.first_name %>
+          </div>
+          <%= link_to image_tag(@user.image, class: :card__img ), parent_books_path %>
+          <% if @parent_book.present?%>
+          <div class="today-info">
+             <div class="register-explain-box">
+               <span>今日の状況</span>
+             </div>
+             <table class="detail-table">
+               <tbody>
+                 <tr>
+                   <th class="detail-item">出欠</th>
+                   <td class="detail-value"><%= @parent_book.attendance.name %></td>
+                 </tr>
+                 <tr>
+                   <th class="detail-item">体温</th>
+                   <td class="detail-value"><%= @parent_book.temperature %></td>
+                 </tr>
+                 <tr>
+                   <th class="detail-item">迎え時間</th>
+                   <td class="detail-value"><%= @parent_book.greeted_time.name %></td>
+                 </tr>
+                 <tr>
+                   <th class="detail-item">迎えに来る人</th>
+                   <td class="detail-value"><%= @parent_book.greeted_name %></td>
+                 </tr>
+                 <tr>
+                   <th class="detail-item">連絡先</th>
+                   <td class="detail-value"><%= @parent_book.tell_number %></td>
+                 </tr>
+               </tbody>
+             </table>
+          </div>
+          <% end %>
+       </div>
+       </div>
+       <% end %>
+       <%# 親%>
     </div>
-  </div>
+   </div>
 </div>
 
