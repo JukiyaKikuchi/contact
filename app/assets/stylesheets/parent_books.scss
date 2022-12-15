@@ -1,3 +1,333 @@
-// Place all the styles related to the parent_books controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+/* border-bottom: 1px solid #eee; */
+/******************************************** 
+  新規投稿（編集）画面
+*********************************************/
+
+.parent-book-contents {
+  background-color: #f5f5f5;
+  font-family: "Source Sans Pro", Helvetica, Arial, "æ¸¸ã‚´ã‚·ãƒƒã‚¯ä½“", "YuGothic", "ãƒ¡ã‚¤ãƒªã‚ª", "Meiryo", sans-serif;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  min-width: 500px;
+}
+
+.parent-book-header {
+  padding: 2vh 0;
+  text-align: center;
+  font-size: 45px;
+  font-weight: bold;
+}
+
+.parent-book-main {
+  background-color: #FFF;
+  width: 70vw;
+  min-width: 450px;
+  padding: 5vh 15vw;
+}
+
+.parent-book-title {
+  font-size: 22px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.parent-sub-title {
+  font-size: 15px;
+  text-align: center;
+  color: #ea352d;
+}
+
+.indispensable {
+  background: #ea352d;
+  margin-left: 8px;
+  padding: 3px;
+  border-radius: 2px;
+  color: #fff;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.weight-bold-text {
+  font-weight: bold;
+  min-width: 170px;
+  margin-bottom: 10px;
+}
+
+.select-box {
+  height: 30px;
+  width: 100%;
+  background-color: #f5f5f5;
+  padding-left: 20px;
+}
+
+.new-book {
+  padding: 2vh 0;
+}
+
+.book-text {
+  width: 100%;
+  padding: 16px 16px 8px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  resize: none;
+  margin-bottom: 30px;
+}
+
+.book-detail {
+  display: flex;
+  justify-content: space-between;
+  padding: 2vh 0;
+}
+
+.book-detail>.form {
+  width: 300px;
+  padding: 2vh 0;
+}
+
+.select-box {
+  margin: 4vh 0;
+}
+
+
+/* 下部ボタン */
+.sell-btn-contents {
+  width: 100%;
+  text-align: center;
+}
+
+.sell-btn {
+  background: #ea352d;
+  border: 1px solid #ea352d;
+  color: #fff;
+  width: 100%;
+  height: 50px;
+  font-size: 14px;
+  margin-bottom: 4vh;
+}
+
+.back-btn {
+  background: #aaa;
+  border: 1px solid #aaa;
+  color: #fff;
+  padding: 15px 35%;
+  text-decoration: none;
+}
+
+/******************************************** 
+  一覧画面
+*********************************************/
+
+.new-main {
+  height: calc(100vh - 65px);
+  padding: 80px 0;
+  background-color: #F2F2F3;
+}
+
+.parent-form {
+  width: 700px;
+  height: 420px;
+  margin: 0 auto;
+}
+
+.form-top {
+  width: 100%;
+  height: 45px;
+  border-radius: 5px 5px 0 0;
+  background-color: #1C3667;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.form-top-title {
+  font-size: 18px;
+  color: #f5f5f5;
+}
+
+.parent-form-main {
+  width: 100%;
+  height: 480px;
+  padding: 40px 0;
+  border-radius: 0 0 5px 5px;
+  background-color: #FFFFFF;
+  overflow-x: scroll;
+  font-weight: bold;
+  font-size: 20px;
+  padding: 20px;
+}
+
+.form-list{
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 10px;
+}
+
+.btn-area{
+  display: flex;
+  justify-content: center;
+  margin-top: 120px;
+}
+
+.parent-red-btn {
+  background-color: #ea352d;
+  font-size: 24px;
+  font-weight: bold;
+  color: #FFF;
+  margin: 20px 0px;
+  padding: 2vh 10vw;
+}
+
+/******************************************** 
+  詳細画面
+*********************************************/
+
+.parent_book-show {
+  background-color: #f8f8f8;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 5vh 0;
+}
+
+.book-box {
+  background-color: #FFF;
+  width: 70vw;
+  min-width: 1200px;
+  padding: 10vh 15vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.book-box>.name {
+  text-align: center;
+  font-weight: bold;
+  font-size: 25px;
+  margin-bottom: 10px;
+}
+
+.parent-box-img {
+  height: 50vh;
+  width: 60vw;
+  min-height: 500px;
+  background-color: rgb(205, 202, 202);
+  object-fit: contain;
+  margin-bottom: 20px;
+}
+
+.parent-red-btn {
+  text-align: center;
+  background-color: #ea352d;
+  font-size: 24px;
+  font-weight: bold;
+  color: #FFF;
+  margin: 20px 0px;
+  padding: 2vh 10vw;
+}
+
+.or-text {
+  font-size: 20px;
+}
+
+.parent-destroy {
+  background-color: lightgray;
+  text-align: center;
+  font-size: 24px;
+  color: black;
+  margin: 20px 0px;
+  padding: 2vh 10vw;
+}
+
+.parent-explain-box {
+  font-size: 28px;
+  margin: 40px 0px;
+  overflow-wrap: anywhere;
+  font-weight: bold;
+}
+
+.detail-table {
+  margin-bottom: 30px;
+  width: 100%;
+}
+
+.detail-item {
+  width: 20%;
+  background-color: #eee;
+  border: 1px solid #dedede;
+  font-size: 14px;
+  text-align: center;
+}
+
+.detail-value {
+  width: 80%;
+  padding: 20px;
+  border: 1px solid #dedede;
+  font-size: 14px;
+}
+
+
+
+.teacher-comments {
+  padding: 5px;
+  margin-top: 15px;
+}
+
+.teacher-comments h4 {
+  font-weight: bold;
+}
+
+.teacher-comments p {
+  margin-bottom: 5px;
+  margin-top: 5px;
+}
+
+.teacher-comments strong {
+  color: #57C3E9;
+  font-size: 20px;
+}
+
+
+form input,
+form textarea {
+  width: 100%;
+  margin: 5px 0 15px;
+  padding: 10px;
+  border: 1px solid #D8D8D8;
+  border-radius: 5px;
+  font-family: "游ゴシック", "YuGothic";
+}
+
+form input[type="submit"] {
+  background-color: #57C3E9;
+  border-radius: 20px;
+  color: #fff;
+  border: 0;
+  font-size: 18px;
+}
+
+form input[type="submit"]:hover {
+  background-color: #84d3ef;
+}
+
+
+.teacher-comment-form {
+  margin: 20px 0;
+  padding: 40px;
+  border: solid;
+  border-color: #F2F2F3;
+  background-color: white;
+  box-sizing: border-box;
+}
+
+.teacher-comment-form h3 {
+  margin: 0 0 20px;
+  text-align: center;
+  font-weight: normal;
+  font-size: 20px;
+  color: #666;
+}
+
