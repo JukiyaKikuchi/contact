@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_12_09_024131) do
+ActiveRecord::Schema.define(version: 2022_12_12_021745) do
 
   create_table "active_storage_attachments", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name", null: false
@@ -44,6 +44,7 @@ ActiveRecord::Schema.define(version: 2022_12_09_024131) do
     t.integer "attendance_id", null: false
     t.integer "greeted_time_id"
     t.bigint "user_id", null: false
+    t.integer "register_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["user_id"], name: "index_parent_books_on_user_id"
@@ -52,8 +53,10 @@ ActiveRecord::Schema.define(version: 2022_12_09_024131) do
   create_table "registers", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "title", null: false
     t.text "general_comment", null: false
+    t.bigint "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.index ["user_id"], name: "index_registers_on_user_id"
   end
 
   create_table "teacher_comments", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -80,12 +83,14 @@ ActiveRecord::Schema.define(version: 2022_12_09_024131) do
     t.datetime "remember_created_at"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.boolean "admin", default: false
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "parent_books", "users"
+  add_foreign_key "registers", "users"
   add_foreign_key "teacher_comments", "parent_books"
   add_foreign_key "teacher_comments", "users"
 end

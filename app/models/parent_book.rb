@@ -11,5 +11,6 @@ class ParentBook < ApplicationRecord
   validates :tell_number, format: {with:/\A\d{10,11}\z/}
 
   belongs_to :user
-  has_many :teacher_comments
+  belongs_to :register, optional: true
+  has_many :teacher_comments, dependent: :destroy
 end
