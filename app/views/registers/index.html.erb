@@ -37,6 +37,15 @@
            <div class="child-condition">
              <%= link_to parent_book.user.first_name, parent_book_path(parent_book.id) %>
            </div>
+           <div class="attendance">
+             <%= parent_book.attendance.name %>
+           </div>
+           <div class="tempereture">
+             <%= parent_book.temperature %>
+           </div>
+           <div class="greeted_time">
+             <%= parent_book.greeted_time.name %>
+           </div>
            <div class="post-date">
              <%= parent_book.created_at.strftime("%Y/%m/%d") %>
            </div>
