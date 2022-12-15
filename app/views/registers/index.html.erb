@@ -1,7 +1,7 @@
 <%# 一覧表示画面 %>
 <div class='index-main'>
   <div class='general_information'>
-    全体のお知らせ
+    ＜全体のお知らせ＞
   </div>
   <div class='post-contents'>
     <% @registers.each do |register| %>
@@ -28,14 +28,14 @@
     <div class='parent-form'>
       <div class='form-top'>
         <div class='form-top-title'>
-          家庭用連絡帳一覧
+          連絡帳一覧
         </div>
       </div>
       <div class="admin-form-main">
       <% @parent_books.each do |parent_book|%>
          <div class="admin-form-list">
            <div class="child-condition">
-             <%= link_to parent_book.attendance.name, parent_book_path(parent_book.id) %>
+             <%= link_to parent_book.user.first_name, parent_book_path(parent_book.id) %>
            </div>
            <div class="post-date">
              <%= parent_book.created_at.strftime("%Y/%m/%d") %>
@@ -52,7 +52,7 @@
   <%# 管理者画面 %>
     <% if user_signed_in? && current_user.admin? %>
     <div class = "children">
-      子どもたち
+      ＜子どもたち＞
     </div>
     <div class ="user__card_area">
        <% @users.each do |user| %>

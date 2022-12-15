@@ -4,10 +4,12 @@
       <p class="register__heading">
         <%= @register.title %>
       </p>    
+      <% if user_signed_in? && current_user.admin?%>
       <div class="register__manage">
           <%= link_to "編集する", edit_register_path(@register.id), method: :get, class: :register__btn %>
           <%= link_to "削除する",  register_path(@register.id), method: :delete, class: :register__btn %>
       </div>
+      <% end %>
     </div>
     <div class="register-form">
       <div class='register-form-top'>

@@ -26,6 +26,12 @@
       </div>
       <%= f.text_area :parent_name, class:"book-text", id:"item-name" %>
 
+      <div class='weight-bold-text'>
+        緊急連絡先
+        <span class="indispensable">必須</span>
+      </div>
+      <%= f.text_field :tell_number, class:"book-text", id:"phone-number", placeholder:"例）09012345678",maxlength:"11"%>
+
       <div class="weight-bold-text">
           ご家庭での様子
           <span class="indispensable">必須</span>
@@ -66,11 +72,6 @@
       </div>
       <%= f.text_area :greeted_name, class:"book-text", id:"item-name" %>
 
-      <div class='weight-bold-text'>
-        緊急連絡先
-        <span class="indispensable">必須</span>
-      </div>
-      <%= f.text_field :tell_number, class:"book-text", id:"phone-number", placeholder:"例）09012345678",maxlength:"11"%>
     </div>
 
 

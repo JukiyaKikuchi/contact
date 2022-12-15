@@ -10,7 +10,7 @@
 
     <%# フォームのメイン部分 %>
     <div class='parent-form-main'>
-      
+    <% if user_signed_in?  %>
      <% @parent_books.each do |parent_book| %>
       <div class="form-list">
        <div class="child-condition">
@@ -20,8 +20,8 @@
          <%= parent_book.created_at.strftime("%Y/%m/%d") %>
        </div>
       </div>
-     <% end %>
-    
+      <% end %>
+    <% end %>
     </div>
   </div>
 

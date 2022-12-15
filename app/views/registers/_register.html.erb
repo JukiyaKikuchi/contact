@@ -1,3 +1,41 @@
+<% if user_signed_in? && current_user.admin? %>
 <div class="card">
+  <div class="child-name-box">
+      <%= user.last_name %>
+  </div>
   <%= link_to image_tag(user.image, class: :card__img ), parent_books_path %>
+  <% if @parent_book.present?%>
+  <div class="today-info">
+     <div class="register-explain-box">
+      <span>今日の状況</span>
+     </div>
+    <table class="detail-table">
+      <tbody>
+        <tr>
+          <th class="detail-item">出欠</th>
+          <td class="detail-value"><%= @parent_book.attendance.name %></td>
+        </tr>
+        <tr>
+          <th class="detail-item">体温</th>
+          <td class="detail-value"><%= @parent_book.temperature %></td>
+        </tr>
+       
+        <tr>
+          <th class="detail-item">迎え時間</th>
+          <td class="detail-value"><%= @parent_book.greeted_time.name %></td>
+        </tr>
+        <tr>
+          <th class="detail-item">迎えに来る人</th>
+          <td class="detail-value"><%= @parent_book.greeted_name %></td>
+        </tr>
+        <tr>
+          <th class="detail-item">連絡先</th>
+          <td class="detail-value"><%= @parent_book.tell_number %></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <% end %>
 </div>
+<% end %>
+

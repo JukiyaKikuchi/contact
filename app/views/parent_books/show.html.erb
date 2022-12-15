@@ -6,10 +6,10 @@
     <div class="item-img-content">
       <%= image_tag @parent_book.user.image ,class:"parent-box-img" %>
     </div>
-
+    <% unless current_user.admin? %>
         <%= link_to "編集", edit_parent_book_path(@parent_book.id), method: :get, class: "parent-red-btn" %>
         <%= link_to "削除", parent_book_path(@parent_book.id), method: :delete, class:"parent-destroy" %>
-
+    <% end %>
     <div class="parent-explain-box">
       <span>入力情報</span>
     </div>
@@ -53,4 +53,23 @@
         </tr>
       </tbody>
     </table>
+    <% if user_signed_in? && current_user.admin?%>
+    <div class="teacher-comment-form">
+         <%= form_with(model: [@parent_book, @teacher_comment], local: true) do |form| %>
+           <%= form.text_field :teacher_name, placeholder: "先生の名前" %>
+           <%= form.text_area :teacher_comment, placeholder: "コメントする" %>
+           <%= form.submit "SEND" %>
+         <% end %>
+    <% end %>
+       <div class="teacher-comments">
+         <h4>＜園から＞</h4>
+         <% @teacher_comments.each do |teacher_comment| %>
+           <p>
+             <strong><%= teacher_comment.teacher_name %><br></strong>
+             <%= teacher_comment.teacher_comment %>
+           </p>
+         <% end %>
+       </div>
+     </div>
   </div>
+</div>
