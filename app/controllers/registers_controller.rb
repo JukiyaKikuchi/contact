@@ -1,9 +1,12 @@
 class RegistersController < ApplicationController
-  before_action :set_register, only: [:edit, :show, :update, ]
+  before_action :set_register, only: [:edit, :show, :update ]
 
   def index
-    @users = User.all
+    @user = User.where(id: current_user.id).first
+    @users = User.where.not(admin: true)
     @registers = Register.all
+    @parent_book = ParentBook.where(user_id: current_user.id).last
+    @parent_books = ParentBook.includes(:user).order("created_at DESC")
   end
 
   def new
@@ -42,7 +45,7 @@ class RegistersController < ApplicationController
 
   private
   def register_params
-    params.require(:register).permit(:title, :general_comment, :image)
+    params.require(:register).permit(:title, :general_comment, :image).merge(user_id: current_user.id)
   end
 
   def set_register
