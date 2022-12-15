@@ -3,6 +3,9 @@ class ParentBooksController < ApplicationController
 
   def index
     @parent_books = ParentBook.where(user_id: current_user.id).order("created_at DESC")
+    if current_user.admin?
+      redirect_to root_path
+    end
   end
 
   def new
