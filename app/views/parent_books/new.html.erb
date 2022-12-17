@@ -5,7 +5,7 @@
 
   <div class="parent-book-main">
     <h2 class="parent-book-title">情報を入力</h2>
-    <h3 class="parent-sub-title">※お休みする場合は「出欠確認・記入者名・ご家庭での様子」のみ記入してください※</h3>
+    <h3 class="parent-sub-title">※お休みする場合は「出欠確認・記入者名・緊急連絡先・ご家庭での様子」のみ記入してください※</h3>
     
     <%= form_with model: @parent_book, url: parent_books_path, local: true do |f| %>
     <%= render 'shared/error_messages', model: f.object %>
