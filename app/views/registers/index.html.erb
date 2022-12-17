@@ -4,6 +4,7 @@
     ＜全体のお知らせ＞
   </div>
   <div class='post-contents'>
+  <% if @registers.present? %>
     <% @registers.each do |register| %>
       <%# 投稿１件分の表示 %>
       <div class='post-content'>
@@ -20,8 +21,18 @@
         </div>
       </div>
     <% end %>
-  </div>
-
+    <% else %>
+      <div class='post-content'>
+        <%# 質問本文の表示 %>
+        <div class='post-list'>
+          <div class='post-top'>
+            <div class='post-top__title_none'>
+              お知らせはありません
+            </div>
+        </div>
+      </div>
+   </div>
+   <% end %>
   <%#連絡帳%>
   <% if user_signed_in? && current_user.admin? %>
   <div class="list-main">
