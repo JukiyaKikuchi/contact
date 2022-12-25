@@ -6,7 +6,7 @@ class ParentBook < ApplicationRecord
   extend ActiveHash::Associations::ActiveRecordExtensions
   belongs_to :attendance
 
-  validates :parent_name, :parent_comment,  presence: true
+  validates :parent_name, :parent_comment, :tell_number, presence: true
   validates :attendance_id, numericality: { other_than: 1, message: "can't be blank" } 
   validates :tell_number, format: {with:/\A\d{10,11}\z/}
 
