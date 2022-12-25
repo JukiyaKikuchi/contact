@@ -8,7 +8,7 @@ FactoryBot.define do
     greeted_time_id  {2}
     attendance_id  {2}
     mood_id  {2}
-    tell_number  {0000000000}
+    tell_number  {"0000000000"}
 
     
     association :user
