@@ -9,9 +9,9 @@ FactoryBot.define do
     attendance_id  {2}
     mood_id  {2}
     tell_number  {0000000000}
-    register_id  {2}
 
     
     association :user
+    association :register
   end
 end
