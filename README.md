@@ -47,14 +47,17 @@ https://docs.google.com/spreadsheets/d/1OuCeu09lNVFvG1faWi3JME813lcyZuwGgx0SYyd_
 ## 管理者による全体のお知らせ投稿(画像の添付は任意)  
 [![Image from Gyazo](https://i.gyazo.com/92d296e7f11550a30a0fc262f9fa1cea.gif)](https://gyazo.com/92d296e7f11550a30a0fc262f9fa1cea)
 
-## 管理者による連絡帳のコメント  
-### 投稿一覧から返信したい園児の名前を選択  
+## 管理者による連絡帳のコメント投稿  
+### (1)投稿一覧から返信したい園児の名前を選択  
 [![Image from Gyazo](https://i.gyazo.com/cd160082e07dadba502e334cac86b4d3.gif)](https://gyazo.com/cd160082e07dadba502e334cac86b4d3)
 
-### 詳細画面の下部へ移動しコメントフォームからコメントを記入  
+### (2)詳細画面の下部へ移動しコメントフォームからコメントを記入  
 [![Image from Gyazo](https://i.gyazo.com/2b80f89904e18b2965211aba5ad7758d.gif)](https://gyazo.com/2b80f89904e18b2965211aba5ad7758d)
 
 ## 保護者による新規連絡帳投稿  
+### (1)保護者でログイン後、自身の子どもの画像をクリックし連絡帳一覧画面へ遷移
+[![Image from Gyazo](https://i.gyazo.com/8403faf894422ab761839dce56dc76a6.gif)](https://gyazo.com/8403faf894422ab761839dce56dc76a6)
+### (2)「新規投稿」ボタンをクリック後、新規投稿画面へ遷移し、内容を入力
 [![Image from Gyazo](https://i.gyazo.com/15fdfd9fe31b1cbf1394764b2630af5c.gif)](https://gyazo.com/15fdfd9fe31b1cbf1394764b2630af5c)
 
 # 実装予定の機能
