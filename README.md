@@ -144,12 +144,14 @@ https://docs.google.com/spreadsheets/d/1OuCeu09lNVFvG1faWi3JME813lcyZuwGgx0SYyd_
 
 
 # 開発環境
-・フロントエンド  
-・バックエンド  
-・テスト  
-・テキストエディタ  
-・タスク管理  
-・画像保存先S3
+・OS:Linux
+・言語:HTML,CSS,JavaScript,Ruby,SQL  
+・フレームワーク:Ruby on Rails
+・JSライブラリ:jQuery  
+・テスト:Rspec(System Spec)  
+・テキストエディタ:Visual Studio Code  
+・タスク管理:github  
+・画像保存先:S3
 
 # ローカルでの動作方法
 以下のコマンドを順に実施。  
