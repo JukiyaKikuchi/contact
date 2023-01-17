@@ -1,9 +1,13 @@
 require 'rails_helper'
 
-RSpec.describe "Users", type: :system do
+RSpec.describe "ユーザー新規登録", type: :system do
   before do
-    driven_by(:rack_test)
+    @user = FactoryBot.build(:user)
   end
 
-  pending "add some scenarios (or delete) #{__FILE__}"
+  context 'ユーザー新規登録ができるとき' do
+  end
+  context 'ユーザー新規登録ができないとき' do
+  end
+  
 end
