@@ -144,10 +144,9 @@ https://docs.google.com/spreadsheets/d/1OuCeu09lNVFvG1faWi3JME813lcyZuwGgx0SYyd_
 
 
 # 開発環境
-・OS:Linux
+・OS:Linux  
 ・言語:HTML,CSS,JavaScript,Ruby,SQL  
-・フレームワーク:Ruby on Rails
-・JSライブラリ:jQuery  
+・フレームワーク:Ruby on Rails  
 ・テスト:Rspec(System Spec)  
 ・テキストエディタ:Visual Studio Code  
 ・タスク管理:github  
