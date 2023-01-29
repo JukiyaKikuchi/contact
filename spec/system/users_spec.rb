@@ -19,6 +19,8 @@ RSpec.describe "ユーザー新規登録", type: :system do
       expect(current_path).to eq(root_path)
       # カーソルを合わせるとログアウトボタンが表示されることを確認する
       # サインアップページへ遷移するボタンや、ログインページへ遷移するボタンが表示されていないことを確認する
+      expect(page).to have_no_content('新規登録')
+      expect(page).to have_no_content('ログイン')
     end
   end
   context 'ユーザー新規登録ができないとき' do
