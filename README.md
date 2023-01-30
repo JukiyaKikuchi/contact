@@ -15,7 +15,7 @@ CONTACT
 ・メールアドレス kanri@tesuto  
 ・パスワード a1a1a1
 
-## 親用アカウント　
+## 親用アカウント
 ・メールアドレス test@example  
 ・パスワード e1e1e1
 
